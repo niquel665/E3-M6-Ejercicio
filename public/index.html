@@ -3,19 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Estático</title>
+  <title>E3-M6 — Express + HBS</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <main class="container">
-    <h1>Página Estática</h1>
-    <p>Si ves estilos, express.static está funcionando ✅</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <h1 class="brand">E3-M6 Ejercicio</h1>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/perfil">Perfil (HBS)</a>
+        <a href="/dashboard">Dashboard (HBS)</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="nav">
-      <a href="/">Home</a>
-      <a href="/perfil">Perfil (HBS)</a>
-      <a href="/dashboard">Dashboard (HBS)</a>
-    </nav>
+  <main class="container">
+    <section class="card">
+      <h2>Página Estática ✅</h2>
+      <p>
+        Esta página se sirve desde <code>public/</code> con <strong>express.static</strong>.
+        Las vistas dinámicas están en <code>views/</code> usando <strong>Handlebars</strong>.
+      </p>
+
+      <div class="badges">
+        <span class="badge">express.static</span>
+        <span class="badge">hbs</span>
+        <span class="badge">partials</span>
+        <span class="badge">helpers</span>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="/dashboard">Ir al Dashboard</a>
+        <a class="btn" href="/perfil">Ver Perfil</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <a class="mini-card" href="/perfil">
+        <h3>👤 Perfil</h3>
+        <p>Render simple con variables (nombre y profesión).</p>
+        <span class="go">Abrir →</span>
+      </a>
+
+      <a class="mini-card" href="/dashboard">
+        <h3>📌 Dashboard</h3>
+        <p>Parciales, condicionales, listas anidadas y helper de prioridad.</p>
+        <span class="go">Abrir →</span>
+      </a>
+
+      <div class="mini-card info">
+        <h3>📁 Estructura</h3>
+        <p><code>public/</code> estático • <code>views/</code> dinámico</p>
+        <span class="go muted">Todo ok ✅</span>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="muted">Express + Handlebars</span>
+      <span class="muted">© 2025</span>
+    </div>
+  </footer>
 </body>
 </html>
